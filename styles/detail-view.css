@@ -1,0 +1,192 @@
+/* Detail View Styles */
+#detail-view {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: var(--primary-accent);
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 15px var(--primary-accent);
+}
+
+.detail-content {
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.detail-header {
+    margin-bottom: 2rem;
+}
+
+#detail-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 15px var(--primary-accent);
+    margin: 0;
+}
+
+#detail-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#detail-title a:hover {
+    color: var(--status-updating);
+    text-shadow: 0 0 15px var(--status-updating);
+}
+
+.video-wrapper {
+    max-width: 70%;
+    margin: 0 auto 2rem auto;
+}
+
+#video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+#video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#detail-description,
+#detail-features {
+    margin-bottom: 2.5rem;
+}
+
+#detail-description p {
+    color: var(--text-secondary);
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: rgba(10, 8, 38, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#detail-description p::-webkit-scrollbar {
+    width: 5px;
+}
+
+#detail-description p::-webkit-scrollbar-thumb {
+    background-color: var(--primary-accent);
+    border-radius: 10px;
+}
+
+#detail-description p:hover {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+#detail-features .features-list {
+    gap: 0.8rem;
+}
+
+#detail-features .feature-tag {
+    font-size: 1rem;
+    padding: 8px 16px;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#detail-discord-link {
+    flex-grow: 1;
+    display: inline-block;
+    text-align: center;
+    padding: 18px 30px;
+    background: linear-gradient(135deg, #23d5ab, #38bdf8);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(35, 213, 171, 0.5);
+    border: none;
+}
+
+#detail-discord-link:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 35px rgba(35, 213, 171, 0.8);
+}
+
+#copy-discord-link {
+    padding: 18px 20px;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+#copy-discord-link:hover {
+    border-color: var(--primary-accent);
+    color: var(--primary-accent);
+}
+
+@media (max-width: 700px) {
+    .detail-content {
+        padding: 1rem 0.5rem;
+    }
+
+    .video-wrapper {
+        max-width: 100%;
+    }
+
+    #detail-title {
+        font-size: 1.3rem;
+    }
+
+    .back-button {
+        padding: 8px 12px;
+        font-size: 0.98rem;
+    }
+
+    #detail-discord-link,
+    #copy-discord-link {
+        padding: 12px 10px;
+        font-size: 1rem;
+    }
+}

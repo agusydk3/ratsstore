@@ -1,0 +1,39 @@
+/* CSS Variables */
+:root {
+    --bg-primary: #020010;
+    --glass-bg: rgba(10, 8, 38, 0.55);
+    --glass-bg-hover: rgba(10, 8, 38, 0.75);
+    --primary-accent: #a855f7;
+    --secondary-accent: #2563eb;
+    --text-primary: #f0f2f5;
+    --text-secondary: #a0aec0;
+    --border-color: rgba(168, 85, 247, 0.3);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --status-ok: #4ade80;
+    --status-updating: #38bdf8;
+    --status-stopped: #f472b6;
+    --star-color: #ffd700;
+    --star-empty: #6b7280;
+    --vip-color: #ffd700;
+    --thuong-color: #38bdf8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
